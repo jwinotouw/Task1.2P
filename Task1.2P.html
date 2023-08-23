@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Design</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 10px;
+            padding: 10px;
+        }
+
+        .item {
+            background-color: lightblue;
+            border: 2px solid black;
+            font-size: 2rem;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ff9a9e 0%, #ff6161 50%, #ff9102 100%);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            grid-column: 1 / span 3;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer {
+            grid-column: 1 / span 3;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Responsive Web Design</h1>
+        </header>
+
+        <div class="item">
+            <h4>What is responsive web design and why it is important?</h4>
+            <p>Responsive web design (RWD) is a web design strategy that seeks to make 
+                web pages render effectively across a number of devices and window or screen 
+                sizes ranging from small to large to ensure usability and satisfaction. 
+                This is how you design for a multi-device web. This implies that a 
+                RWD-designed website will automatically adjust for multiple screen sizes 
+                and viewports, utilising HTML and CSS to resize, conceal, reduce, or grow 
+                a website to make it seem excellent on all platforms (desktops, tablets, 
+                and phones).
+
+                RWD is important since it allows for automatic screen adaptation whether 
+                the website is viewed on a tablet, phone, television, or watch. This will 
+                make sure that consumers will be able to access and have a positive experience 
+                from browsing the website using any devices they own. As a result, RWD will 
+                make an increased traffic to the website.
+            </p>
+        </div>
+
+        <div>
+            <img src="https://www.searchenginejournal.com/wp-content/uploads/2021/10/responsive-web-design-1-61f01c4b64c5f-sej-760x400.webp" alt="Responsive Web Page">
+        </div>
+
+        <div class="item">
+            <h4>How to implement responsive web design with HTML and CSS?</h4>
+            <p>Responsive web design is a method of creating web pages that look well across 
+                a range of devices or screen sizes. It is accomplished through the use of a 
+                combination of adaptable layouts, pictures, and CSS media queries. Here's how 
+                to use HTML and CSS to develop responsive site design:
+            </p>
+                <ul>
+                    <li>Instead of utilising fixed-width layouts, employ a flexible grid layout 
+                        that can adjust to the size of the screen. This may be accomplished by use 
+                        relative units such as percentages or ems rather than fixed units such as pixels.</li>
+                    <li>Use flexible images: Images should also be adaptable to screen size. 
+                        This may be accomplished by setting the image's max-width property to 100%, 
+                        which causes it to scale down as necessary but never to scale up to be greater 
+                        than its original size.</li>
+                    <li>Use CSS media queries: Media queries allow you to apply various styles 
+                        based on the properties of the device, such as its width, height, and 
+                        orientation.</li>
+                </ul>
+        </div>
+
+    </div>
+
+    <div class="container">
+        <header>
+            <h2>Examples of JavaScrip Concepts</h2>
+        </header>
+
+        <div class="item">
+            <h4>5 Examples of String methods</h4>
+            <p id="strings"></p>
+            <script>
+                
+                var text = "Hello, my name is John Winotouw!";
+
+                var textLength = text.length;
+                var textUpper = text.toUpperCase();
+                var textLower = text.toLowerCase();
+                var textSlice = text.slice(7, 22);
+                var textReplace = text.replace("John Winotouw", "Grace Natasya");
+
+                document.getElementById("strings").innerHTML = 
+                "The original text is: " + text + "<br>" +
+                "The length of the text is: " + textLength + "<br>" +
+                "The uppercase version of the text is: " + textUpper + "<br>" +
+                "The lowercase version of the text is: " + textLower + "<br>" +
+                "The sliced part of the text is: " + textSlice + "<br>" +
+                "The replaced version of the text is: " + textReplace + "<br>";
+            </script>
+        </div>
+
+        <div>
+            <img src="https://winerp.com.vn/wp-content/uploads/2022/07/img_62e14d65cb369.jpg" alt="JavaScript">
+        </div>
+
+        <div class="item">
+            <h4>5 Examples of Number methods</h4>
+            <p id="numbers"></p>
+            <script>
+               
+                var x = 3.14159;
+                var y = 7;
+                var z = -4;
+
+               
+                var xFixed = x.toFixed(2);
+                var yString = y.toString(2);
+                var zAbs = Math.abs(z);
+                var xRound = Math.round(x);
+                var ySqrt = Math.sqrt(y);
+
+                document.getElementById("numbers").innerHTML = 
+                "The original numbers are: x = " + x + ", y = " + y + ", z = " + z + "<br>" +
+                "The fixed version of x is: " + xFixed + "<br>" +
+                "The string version of y is: " + yString + "<br>" +
+                "The absolute value of z is: " + zAbs + "<br>" +
+                "The rounded version of x is: " + xRound + "<br>" +
+                "The square root of y is: " + ySqrt + "<br>";
+            </script>
+        </div>
+
+        <div class="item">
+            <h4>5 Examples of Array methods</h4>
+            <p id="array"></p>
+            <script>
+
+                var steps = [
+                    "step 1",
+                    "step 2",
+                    "step 3",
+                    "step 4",
+                    "step 5"
+                ];
+
+                var stepsLength = steps.length;
+                var stepsJoin = steps.join(", ");
+                var stepsReverse = steps.reverse();
+                var stepsPop = steps.pop();
+                var stepsPush = steps.push("step 6");
+
+                document.getElementById("array").innerHTML = 
+                "The original steps are: " + stepsJoin + "<br>" +
+                "The number of steps is: " + stepsLength + "<br>" +
+                "The reversed order of the steps is: " + stepsReverse + "<br>" +
+                "The popped step is: " + stepsPop + "<br>" +
+                "The new number of steps is: " + stepsPush + "<br>";
+            </script>
+        </div>
+
+        <div class="item">
+            <h4>5 Examples of Date methods</h4>
+            <p id="date"></p>
+            <script>
+
+                var today = new Date();
+
+                var year = today.getFullYear();
+                var month = today.getMonth() + 1;
+                var date = today.getDate();
+                var day = today.getDay();
+                var hour = today.getHours();
+                var minute = today.getMinutes();
+                var second = today.getSeconds();
+                
+                var weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+                document.getElementById("date").innerHTML =
+                 "The current date and time is: " + today + "<br>" +
+                 "The year is: " + year + "<br>" +
+                 "The month is: " + month + "<br>" +
+                 "The date is: " + date + "<br>" +
+                 "The day is: " + weekdays[day] + "<br>" +
+                 "The hour is: " + hour + "<br>" +
+                 "The minute is: " + minute + "<br>" +
+                 "The second is: " + second;
+            </script>
+        </div>
+
+        <div class="item">
+            <h4>2 Examples of Function Methods</h4>
+            <p id="function"></p>
+            <script>
+
+                function myFunction(X, Y) 
+                {return X * Y;}
+                var function1 = "X=4 Y=3"
+                var result1 = myFunction(4, 3);
+
+                function toCelsius(fahrenheit) 
+                {return (5/9) * (fahrenheit-32);} 
+                var function2 = "77 fahrenheit"
+                var result2 = toCelsius(77) + " Celsius.";
+
+                document.getElementById("function").innerHTML = 
+                "The original numbers are: " + function1 + "<br>" +
+                "The result of X*Y is: " + result1 + "<br>" +
+                "The original Temperature are:" + function2 + "<br>" +
+                "Converted Temperature to Celcius is:" + result2;
+
+            </script>
+        </div>
+
+        <footer>
+            <p>© 2023 Created by John Winotouw.</p>
+        </footer>
+
+    </div>
+</body>
+</html>
